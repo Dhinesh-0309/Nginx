@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  web1:
+    build: .
+    ports:
+      - "8001:8000"
+    networks:
+      - dhinesh
+
+  web2:
+    build: .
+    ports:
+      - "8002:8000"
+    networks:
+      - dhinesh
+
+  web3:
+    build: .
+    ports:
+      - "8003:8000"
+    networks:
+      - dhinesh
+
+  web4:
+    build: .
+    ports:
+      - "8004:8000"
+    networks:
+      - dhinesh
+
+networks:
+  dhinesh:
+    driver: bridge
